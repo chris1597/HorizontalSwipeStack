@@ -1,4 +1,4 @@
-# swipe_stack
+# horizontal_swipe_stack
 
 Swipe stack flutter.
 
