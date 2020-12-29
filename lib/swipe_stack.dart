@@ -256,7 +256,7 @@ class SwipeStackState extends State<SwipeStack> with SingleTickerProviderStateMi
         },
         onPanUpdate: (DragUpdateDetails dragUpdateDetails) {
           _left += dragUpdateDetails.delta.dx;
-          _top += dragUpdateDetails.delta.dy;
+         // _top += dragUpdateDetails.delta.dy;
 
           _progress = (100 / _baseContainerConstraints.maxWidth) * _left.abs();
           _currentItemPosition = (_left.toInt() == 0) ? SwiperPosition.None : (_left < 0) ? SwiperPosition.Left : SwiperPosition.Right;
