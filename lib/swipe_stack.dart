@@ -41,7 +41,7 @@ class SwipeStack extends StatefulWidget {
     this.visibleCount = 2,
     this.translationInterval = 0,
     this.scaleInterval = 0,
-    this.animationDuration = const Duration(milliseconds: 200),
+    this.animationDuration = const Duration(milliseconds: 400),
     this.historyCount = 1,
     this.onEnd,
     this.onSwipe,
@@ -292,7 +292,7 @@ class SwipeStackState extends State<SwipeStack> with SingleTickerProviderStateMi
     if (widget.children.length > 0 && _animationController.status != AnimationStatus.forward) {
       _animationType = 2;
       _animationX = Tween<double>(begin: 0, end: _baseContainerConstraints.maxWidth * -1).animate(_animationController);
-      _animationY = Tween<double>(begin: 0, end: (_baseContainerConstraints.maxHeight / 2) * -1).animate(_animationController);
+      //_animationY = Tween<double>(begin: 0, end: (_baseContainerConstraints.maxHeight / 2) * -1).animate(_animationController);
       if (widget.maxAngle > 0)
         _animationAngle = Tween<double>(begin: 0, end: _maxAngle * 0.7).animate(_animationController);
       _animationController.forward();
@@ -303,7 +303,7 @@ class SwipeStackState extends State<SwipeStack> with SingleTickerProviderStateMi
     if (widget.children.length > 0 && _animationController.status != AnimationStatus.forward) {
       _animationType = 2;
       _animationX = Tween<double>(begin: 0, end: _baseContainerConstraints.maxWidth).animate(_animationController);
-      _animationY = Tween<double>(begin: 0, end: (_baseContainerConstraints.maxHeight / 2) * -1).animate(_animationController);
+      //_animationY = Tween<double>(begin: 0, end: (_baseContainerConstraints.maxHeight / 2) * -1).animate(_animationController);
       if (widget.maxAngle > 0)
         _animationAngle = Tween<double>(begin: 0, end: (_maxAngle * 0.7) * -1).animate(_animationController);
       _animationController.forward();
